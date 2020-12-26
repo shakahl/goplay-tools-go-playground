@@ -235,7 +235,7 @@
 			},
 			{
 				"name": "rsa",
-				"synopsis": "Package rsa implements RSA encryption as specified in PKCS#1.\n\n[\"crypto/rsa\" on pkg.go.dev](https://pkg.go.dev/crypto/rsa/)",
+				"synopsis": "Package rsa implements RSA encryption as specified in PKCS #1 and RFC 8017.\n\n[\"crypto/rsa\" on pkg.go.dev](https://pkg.go.dev/crypto/rsa/)",
 				"url": "https://pkg.go.dev/crypto/rsa/",
 				"path": "crypto/rsa",
 				"depth": 20,
@@ -1244,7 +1244,16 @@
 		"url": "https://pkg.go.dev/time/",
 		"path": "time",
 		"depth": 0,
-		"children": []
+		"children": [
+			{
+				"name": "tzdata",
+				"synopsis": "Package tzdata provides an embedded copy of the timezone database.\n\n[\"time/tzdata\" on pkg.go.dev](https://pkg.go.dev/time/tzdata/)",
+				"url": "https://pkg.go.dev/time/tzdata/",
+				"path": "time/tzdata",
+				"depth": 20,
+				"children": []
+			}
+		]
 	},
 	{
 		"name": "unicode",
