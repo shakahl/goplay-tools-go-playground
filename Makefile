@@ -1,3 +1,8 @@
+GO := go
+NODE := node
+NPM := npm
+COLLECTOR := tools/collector
+
 PKG := ./cmd/playground
 UI := ./web
 TARGET := ./target
@@ -23,3 +28,10 @@ ui:
 cover:
 	@cat tools/cover.txt | xargs go test -v -covermode=count -coverprofile=/tmp/cover.out && \
 	go tool cover -html=/tmp/cover.out
+
+.PHONY: update-indexes
+update-indexes:
+	@if [ ! -d "$(COLLECTOR)/node_modules" ]; then\
+		cd "$(COLLECTOR)/node_modules"; $(NPM) install;\
+	fi;\
+	$(NODE) "$(COLLECTOR)"
